@@ -2,6 +2,8 @@
 
 Build and push Docker Image to both Docker Hub and GitHub Container Registry (ghcr.io)
 
+⚠️ Use all-lowercase-repository-name to prevent naming issue
+
 ## Usage
 
 ### Edge Image
@@ -21,7 +23,7 @@ Build and push Docker Image to both Docker Hub and GitHub Container Registry (gh
       type=edge
 
 - name: Build and Push Image
-  uses: tomy0000000/actions/build-push-image@master
+  uses: tomy0000000/actions/build-push-image@main
   with:
     docker_password: ${{ secrets.DOCKER_PASSWORD }}
     tags: ${{ steps.meta.outputs.tags }}
@@ -47,7 +49,7 @@ Build and push Docker Image to both Docker Hub and GitHub Container Registry (gh
       type=semver,pattern={{version}}
 
 - name: Build and Push Image
-  uses: tomy0000000/actions/build-push-image@master
+  uses: tomy0000000/actions/build-push-image@main
   with:
     docker_password: ${{ secrets.DOCKER_PASSWORD }}
     tags: ${{ steps.meta.outputs.tags }}
