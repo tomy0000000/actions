@@ -8,10 +8,14 @@ inputs:
     required: true
   tags:
     description: "Tags generated with metadata-action"
-    required: true
+    required: false
   labels:
     description: "Labels generated with metadata-action"
-    required: true
+    required: false
+  context:
+    description: "Building directory"
+    required: false
+    default: "."
 
 runs:
   using: composite
@@ -35,6 +39,7 @@ runs:
     - name: Build and Push
       uses: docker/build-push-action@v3
       with:
+        context: ${{ inputs.context }}
         push: true
         tags: ${{ inputs.tags }}
         labels: ${{ inputs.labels }}
