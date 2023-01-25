@@ -55,3 +55,11 @@ Build and push Docker Image to both Docker Hub and GitHub Container Registry (gh
     tags: ${{ steps.meta.outputs.tags }}
     labels: ${{ steps.meta.outputs.labels }}
 ```
+
+## Reference
+
+- [actions/checkout](https://github.com/actions/checkout)
+- [docker/metadata-action](https://github.com/docker/metadata-action)
+- [docker/setup-buildx-action](https://github.com/docker/setup-buildx-action)
+- [docker/login-action](https://github.com/docker/login-action)
+- [docker/build-push-action](https://github.com/docker/build-push-action)
