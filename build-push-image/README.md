@@ -9,12 +9,12 @@ Build and push Docker Image to both Docker Hub and GitHub Container Registry (gh
 ### Edge Image
 
 ```yml
-- name: Checkout
-  uses: actions/checkout@v2
+- name: 🛒 Checkout
+  uses: actions/checkout@v3
 
-- name: Set up Docker Meta
+- name: ⚙️ Setup Docker Meta
   id: meta
-  uses: docker/metadata-action@v3
+  uses: docker/metadata-action@v4
   with:
     images: |
       ${{ github.repository }}
@@ -22,7 +22,7 @@ Build and push Docker Image to both Docker Hub and GitHub Container Registry (gh
     tags: |
       type=edge
 
-- name: Build and Push Image
+- name: 🏗 Build and Push Image
   uses: tomy0000000/actions/build-push-image@main
   with:
     docker_password: ${{ secrets.DOCKER_PASSWORD }}
@@ -33,12 +33,12 @@ Build and push Docker Image to both Docker Hub and GitHub Container Registry (gh
 ### Latest & SemVer Image
 
 ```yml
-- name: Checkout
-  uses: actions/checkout@v2
+- name: 🛒 Checkout
+  uses: actions/checkout@v3
 
-- name: Set up Docker Meta
+- name: ⚙️ Setup Docker Meta
   id: meta
-  uses: docker/metadata-action@v3
+  uses: docker/metadata-action@v4
   with:
     images: |
       ${{ github.repository }}
@@ -48,7 +48,7 @@ Build and push Docker Image to both Docker Hub and GitHub Container Registry (gh
       type=semver,pattern={{major}}.{{minor}}
       type=semver,pattern={{version}}
 
-- name: Build and Push Image
+- name: 🏗 Build and Push Image
   uses: tomy0000000/actions/build-push-image@main
   with:
     docker_password: ${{ secrets.DOCKER_PASSWORD }}
