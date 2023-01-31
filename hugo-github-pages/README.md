@@ -27,6 +27,7 @@ defaults:
 
 jobs:
   build:
+    name: 🛠 Build
     runs-on: ubuntu-latest
     steps:
       - name: 🛒 Checkout
@@ -38,6 +39,7 @@ jobs:
         uses: tomy0000000/actions/hugo-github-pages@main
 
   deploy:
+    name: 🚀 Deploy
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
