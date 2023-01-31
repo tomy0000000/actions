@@ -37,7 +37,7 @@ runs:
         password: ${{ github.token }}
 
     - name: Build and Push
-      uses: docker/build-push-action@v3
+      uses: docker/build-push-action@v4
       with:
         context: ${{ inputs.context }}
         push: true
