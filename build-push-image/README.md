@@ -54,6 +54,7 @@ Build and push Docker Image to both Docker Hub and GitHub Container Registry (gh
     docker_password: ${{ secrets.DOCKER_PASSWORD }}
     tags: ${{ steps.meta.outputs.tags }}
     labels: ${{ steps.meta.outputs.labels }}
+    build_args: ${{ FOO=bar,BAZ=qux }}
 ```
 
 ## Reference

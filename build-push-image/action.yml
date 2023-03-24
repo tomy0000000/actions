@@ -16,6 +16,9 @@ inputs:
     description: "Building directory"
     required: false
     default: "."
+  build_args:
+    description: "Build arguments"
+    required: false
 
 runs:
   using: composite
@@ -43,6 +46,7 @@ runs:
         push: true
         tags: ${{ inputs.tags }}
         labels: ${{ inputs.labels }}
+        build-args: ${{ inputs.build_args }}
 
 branding:
   icon: tool
