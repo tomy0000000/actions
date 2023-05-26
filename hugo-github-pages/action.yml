@@ -2,13 +2,19 @@ name: 📄 Hugo GitHub Pages
 author: tomy0000000
 description: Build Hugo site for GitHub Pages
 
+inputs:
+  hugo_version:
+    description: "Version for Hugo"
+    required: false
+    default: "latest"
+
 runs:
   using: composite
   steps:
     - name: ⚙️ Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: "latest"
+        hugo-version: ${{ inputs.hugo_version }}
         extended: true
 
     - name: ⚙️ Setup Pages
