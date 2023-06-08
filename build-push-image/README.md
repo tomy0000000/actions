@@ -57,6 +57,12 @@ Build and push Docker Image to both Docker Hub and GitHub Container Registry (gh
     build_args: ${{ FOO=bar,BAZ=qux }}
 ```
 
+## Examples
+
+- [tomy0000000/iamges](https://github.com/tomy0000000/images)
+- [tomy0000000/tubee](https://github.com/tomy0000000/tubee)
+- [tomy0000000/k-backend](https://github.com/tomy0000000/k-backend)
+
 ## Reference
 
 - [actions/checkout](https://github.com/actions/checkout)
