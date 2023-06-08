@@ -51,6 +51,11 @@ jobs:
         uses: actions/deploy-pages@v2
 ```
 
+## Examples
+
+- [tomy0000000/cv](https://github.com/tomy0000000/cv)
+- [tomy0000000/blog](https://github.com/tomy0000000/blog)
+
 ## Reference
 
 - [actions/checkout](https://github.com/actions/checkout)
