@@ -14,7 +14,7 @@ Build and push Docker Image to both Docker Hub and GitHub Container Registry (gh
 
 - name: ⚙️ Setup Docker Meta
   id: meta
-  uses: docker/metadata-action@v4
+  uses: docker/metadata-action@v5
   with:
     images: |
       ${{ github.repository }}
@@ -38,7 +38,7 @@ Build and push Docker Image to both Docker Hub and GitHub Container Registry (gh
 
 - name: ⚙️ Setup Docker Meta
   id: meta
-  uses: docker/metadata-action@v4
+  uses: docker/metadata-action@v5
   with:
     images: |
       ${{ github.repository }}
