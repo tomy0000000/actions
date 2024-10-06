@@ -7,6 +7,10 @@ inputs:
     description: "Version for Hugo"
     required: false
     default: "latest"
+  upload:
+    description: "Upload Artifact"
+    required: false
+    default: "true"
 
 runs:
   using: composite
@@ -28,6 +32,7 @@ runs:
 
     - name: ⬆️ Upload artifact
       uses: actions/upload-pages-artifact@v3
+      if: ${{ inputs.upload == 'true' }}
       with:
         path: ./public
 
