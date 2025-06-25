@@ -16,6 +16,9 @@ inputs:
     description: "Building directory"
     required: false
     default: "."
+  dockerfile:
+    description: "Path to Dockerfile"
+    required: false
   build_args:
     description: "Build arguments"
     required: false
@@ -40,8 +43,9 @@ runs:
         password: ${{ github.token }}
 
     - name: Build and Push
-      uses: docker/build-push-action@v4
+      uses: docker/build-push-action@v6
       with:
+        file: ${{ inputs.dockerfile }}
         context: ${{ inputs.context }}
         push: true
         tags: ${{ inputs.tags }}
